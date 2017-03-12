@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    text-align: center;
+    margin: 0 auto;
+    background: #63564D url(../../img/back-end/login_form_box.png) no-repeat 50% 100px;
+/*    border: 1px dashed red;*/
+}
+#login_box {
+    height: 229px;
+    width: 425px;
+    margin: 225px auto 0 auto;
+    overflow: hidden;
+}
+.login_label {
+    color: #fff;
+    font: 13px verdana, tahoma, sans-serif;
+    text-align: left;
+    padding-left: 41px;
+/*    border: 1px solid green;*/
+}
+.login_button {
+    width: 70px;
+    height: 27px;
+}
+.login_text_box {
+    width: 340px;
+    height: 32px;
+    background: #63564D;
+    border: 1px solid #0d2c52;
+    color: #fff;
+    font: 13px verdana, tahoma, sans-serif;
+    text-align: left;
+    direction: ltr;
+}

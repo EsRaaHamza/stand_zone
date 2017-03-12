@@ -1,0 +1,122 @@
+/* 
+    Document   : general
+    Created on : 27/02/2012, 12:16pm
+    Author     : Amr Mekkawy | un4web.com
+    Description: This stylesheet holds general css rules that can be applied on any website
+*/
+
+* { margin: 0; padding: 0; }
+
+input[type=text], input[type=password], select, textarea, input[type=file] {
+    border: 1px solid #bbb;
+    color: #555;
+    font-family: tahoma, arial, sans-serif;
+    margin: 0 0 7px 0;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+input[type=text], input[type=password], input[type=file] {
+    height: 23px;
+    padding: 0 3px;
+    width: 250px;
+}
+input[type=submit], input[type=button] {
+    width: 80px;
+    height: 33px;
+    font-family: tahoma, arial, sans-serif;
+}
+input[type=text].no_outline:focus, input[type=password].no_outline:focus {
+    outline: none;
+}
+select {
+    height: 27px;
+    width: 259px;
+}
+textarea {
+    font-size: 1em;
+    height: 100px;
+    padding: 5px;
+    width: 500px;
+}
+a {
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+a.normal_link {
+    border-bottom: 1px solid transparent;
+    color: #5AC5EF;
+    text-decoration: none;
+}
+a.normal_link:hover {
+    border-bottom: 1px solid blue;
+}
+a.white_link {
+    border-bottom: 1px solid transparent;
+    color: #fff;
+    text-decoration: none;
+}
+a.white_link:hover {
+    border-bottom: 1px solid #fff;
+}
+ul {
+    list-style: none;
+}
+.clear {
+    clear: both;
+    height: 0;
+}
+.hint {
+    color: #777;
+    font-size: 12px;
+}
+table {
+    width: 100%;
+}
+.required {
+    color: red;
+    font-size: 12px;
+}
+.info_message {
+    background: #FAE4E5;
+    border: 1px solid #FF92A7;
+    margin: 0 20px  30px 30px;
+    color: #FF0033;
+    padding: 20px 10px;
+    text-align: center;
+    
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.success_message {
+    background-color: #DBFFDB;
+    border: 1px solid #3FD43F;
+    color: #276B00;
+    margin: 0 20px 30px 30px;
+    padding: 20px 10px;
+    text-align: center;
+    
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+td.caption {
+    color: #333;
+    min-width: 10px;
+    padding-left: 5px;
+    text-align: left;
+}
+.something_wrong {
+    padding: 0;
+    visibility: hidden;
+    color: #D60000;
+}
+hr { /* more: http://css-tricks.com/examples/hrs/ */
+    border: 0; 
+    height: 0; 
+    border-top: 1px solid #aaa; 
+}

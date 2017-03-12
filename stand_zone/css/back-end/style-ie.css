@@ -1,0 +1,10 @@
+/* 
+    Document   : back-end-ie
+    Created on : 18/09/2011, 11:01:44 ص
+    Author     : Amr Mekkawy | un4web.com
+    Description: This is the style sheet file that will fix bugs for IE browser (for admin area)
+*/
+
+td.caption_ie {
+    width: 80px;
+}

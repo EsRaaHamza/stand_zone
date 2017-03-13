@@ -9,13 +9,21 @@
     float: right;
     
 }
-.marg_p{
+.marg_p_1{
     height: auto;
     margin-right: 171px;
     margin-top: 96px;
 
-/*    overflow: hidden;
-*/}.titleimg{
+    overflow: hidden;
+}
+/*.marg_p_2{
+    height: auto;
+    margin-right: 171px;
+    margin-top: 96px;
+
+    overflow: hidden;
+}*/
+.titleimg{
    height: auto;
 }
 </style>
@@ -31,17 +39,69 @@
         <div class="page_c" style="background-image: url(img/bg_final.jpg); height: 660px; width: 1440px;">
             
             {if (($projects|@count) <=2 )}
-<!-- hi if -->
+            <script type="text/javascript">
+                    var flag = false; 
+                </script>
+
             {foreach $projects as $data}
-            <!-- inside foreach -->
-                <div class="col-lg-4 pull-right data_new  data_new_p animated3 bounceIn wow">
-                    <div class="marg_p">
-                        
-                      
+            
+                <div class="col-lg-4 pull-right data_new  data_new_p animated3 bounceIn wow" id="test" >
+               
+
+               <!--  i used javascript because i wanted to create a seprate div for each record read from database and this 
+                wasnot possible without javascript .. the original code that didnt include javascript is in test.tpl file -->
+                
+                        <script type="text/javascript">
+                            if(flag == false) //first div with the first class named merg_p
+                            {
+                                alert("hello from if");
+                                var mydiv = document.createElement("div");
+                                mydiv.className = 'marg_p_1';  //the targeted class 
+                                var myimg = document.createElement("img");
+                               // console.log("myimg is created");
+                               myimg.setAttribute("src", "uploads/projects/medium/{$data.image_name}");
+                               myimg.className = 'img_adjust';
+                               var mytitle = document.createElement("h3");
+                               var mytext = document.createTextNode("{$data.title}");
+                               mytitle.appendChild(mytext);
+                               console.log("mytitle is created");
+                               mydiv.appendChild(myimg);
+                               mydiv.appendChild(mytitle);
+                               document.getElementById("test").appendChild(mydiv); 
+                               var flag = true; 
+                               console.log(flag);
+                               //set flag = true to enter the else and create the second div with the second class 
+
+                               // myimg.style.width = "100px"; 
+                             
+                         }
+                         else   //for the second div
+                         {
+                            alert("hello from else");
+                                var mydiv = document.createElement("div");
+                                mydiv.className = 'marg_p_2';  //the targeted class 
+                                var myimg = document.createElement("img");
+                               // console.log("myimg is created");
+                               myimg.setAttribute("src", "uploads/projects/medium/{$data.image_name}");
+                               myimg.className = 'img_adjust';
+                               var mytitle = document.createElement("h3");
+                               var mytext = document.createTextNode("{$data.title}");
+                               mytitle.appendChild(mytext);
+                               console.log("mytitle is created");
+                               mydiv.appendChild(myimg);
+                               mydiv.appendChild(mytitle);
+                               document.getElementById("test").appendChild(mydiv); 
+                               flag = true; 
+
+
+                         }
+                         
+                        </script>
+                      <!-- 
                         <img src="uploads/projects/medium/{$data.image_name}" class="pull-right news_img img_adjust" />
                         
                        <div> <h3>{$data.title}</h3>
-                        </div>
+                        </div> -->
                         
                         <div class="details details_news" style="text-align: right;">{brief_text($data.content,10)}</div>
                         
@@ -111,7 +171,7 @@
 
              exit else
             {/if}
-            </div>
+          <!--   </div> -->
             <p class="clear"> </p>
         </div>
         <br/>
